@@ -13,12 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: REPL
+title: Paul Wang's REPL
+author: Paul Wang
 email: plwg at pm.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Read - Eval - Print - Loop
+  Read
+  Evaluation
+  Print
+  Loop
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "plwg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  plwg
 
@@ -39,3 +43,12 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+moving:
+  about_you: Reader Writer Evaluator
+  date_format: "%b %d"
+  back_to: "Index"
+  social_links:
+    rss: RSS
+    github: plwg
+    linkedin: paul-wang-38579098 
