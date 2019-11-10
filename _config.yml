@@ -47,7 +47,7 @@ plugins:
 moving:
   about_you: Reader Writer Evaluator
   date_format: "%b %d"
-  back_to: "Index"
+  back_to: ""
   social_links:
     rss: RSS
     github: plwg
