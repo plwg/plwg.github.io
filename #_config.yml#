@@ -16,10 +16,10 @@
 title: REPL
 email: plwg at pm.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Read - Eval - Print - Loop
+Read - Eval - Print - Loop
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "plwg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+twitter_username: jekyllrb
 github_username:  plwg
 
 # Build settings
