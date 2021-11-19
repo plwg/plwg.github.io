@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>media on Logjam</title>
+    <link>https://plwg.github.io/tags/media/</link>
+    <description>Recent content in media on Logjam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://plwg.github.io/tags/media/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Social Media is a Loading Spring</title>
+      <link>https://plwg.github.io/social-media-is-a-loading-spring/</link>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://plwg.github.io/social-media-is-a-loading-spring/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;A system is spring-loaded if it is coiled in a certain direction, positive or negative.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Many have said that social media is an echo chamber. It comes to my
+mind that a more appropriate metaphor is a spring being loaded.&lt;/p&gt;
+&lt;p&gt;Consider the fictional case of Alice.&lt;/p&gt;
+&lt;p&gt;Alice posts an opinion on Ditto, a social media platform. Many of
+Alice&amp;rsquo;s followers agree with her and start to &amp;ldquo;ditto&amp;rdquo; Alice&amp;rsquo;s post,
+pushing it to their follower&amp;rsquo;s timeline. Their followers do the same.
+Logically, this process will repeat and propagate itself until it
+reaches an equilibrium, &lt;strong&gt;which is the point that every new person
+exposed is neutral or negative about Alice&amp;rsquo;s opinion&lt;/strong&gt;. And inevitably
+it will reach an end, unless Alice&amp;rsquo;s opinion happens to be a novel
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Snow%5FCrash&#34;&gt;neo-lingustic virus&lt;/a&gt; that is capable of taking over the world.&lt;/p&gt;
+&lt;p&gt;The end result is a highly unpleasant experience for Alice. During the
+&amp;ldquo;spring-loading&amp;rdquo; phase, her content spreads far and fast among
+supporters. But the end result is that her opinion will eventually get
+exposed to an &lt;strong&gt;as-large-as-possible&lt;/strong&gt; surface area of dislike and
+ambivalence, often with size many times of her supporter. And because
+an attacker can always trace back to Alice, she might suddenly found
+that the wind has changed and she is facing a backlash for her
+previously popular opinion.&lt;/p&gt;
+&lt;p&gt;While it is not a novel observation that people face criticisms and
+backlash online, I think the thing worth noting is the spring-like
+nature of this phenomenon, that the public opinion will inevitably violently
+recoil, and the more popular an online opinion was, the worse the
+backlash in the end. Perhaps this is why people are polarized
+nowadays. Perhaps Alice&amp;rsquo;s opinion should never have reached so many
+disapproving eyeballs.&lt;/p&gt;
+&lt;p&gt;Can something be done about this? It probably requires tweaking the
+algorithm of these social media platforms such that the speed a piece
+of information travels is dampen and the recoil eased. Should it be
+done? I don&amp;rsquo;t know. If overdone, I afraid it risks creating real echo
+chamber where information circulates only internally.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    
+  </channel>
+</rss>
