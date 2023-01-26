@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Blog by Paul Wang">
+    
+    <link rel="shortcut icon" href="https://plwg.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Kelly Calculator for Simultaneous Bets</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://plwg.github.io">Logjam</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/tags/" title="tags">tags</a>
+            </li><li>
+                <a href="/about/" title="me">me</a>
+            </li><li>
+                <a href="https://plwg.github.io/index.xml" title="rss">rss</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Kelly Calculator for Simultaneous Bets</h1>
+            <div>
+                <time>January 25, 2023</time>
+                </div>
+    </header><p>This post presents a python script that calculates the optimal bet
+sizes of multiple simultaneous bets according to <a href="https://en.wikipedia.org/wiki/Kelly%5Fcriterion">Kelly Criterion</a>.
+Given a set of bets and bet sizes, it calculates the expected log
+wealth, and uses Stochastic Gradient Descence to update the bet sizes
+along directions that increase the pay off. This process is repeated a
+specific number of times.</p>
+<p>I also added the option to discount the payoff by a &ldquo;risk-free rate&rdquo;,
+in the case that the bets are resolving in different dates.</p>
+<p>To experiment with the script, set the following variable:</p>
+<ul>
+<li><code>provided_odds</code>: these are the probabilities that are implied by the
+bookie&rsquo;s odds</li>
+<li><code>fair_odds_win</code>: these are the true probabilities</li>
+<li><code>resolve_date</code>: these are the future dates when the bets will resolve</li>
+<li><code>risk_free_rate</code>: this is the rate used to discount future payoff</li>
+<li><code>discount</code>: whether to discount the bets</li>
+</ul>
+<!--listend-->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">provided_odds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.1</span><span class="p">])</span>
+<span class="n">fair_odds_win</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.9</span><span class="p">])</span>
+<span class="n">number_of_bets</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fair_odds_win</span><span class="p">)</span>
+
+<span class="n">payout</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">provided_odds</span>
+<span class="n">risk_free_rate</span> <span class="o">=</span> <span class="mf">0.06</span>
+<span class="n">resolve_date</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">),</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2030</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)]</span>
+<span class="n">discount_rate</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([(</span><span class="mi">1</span><span class="o">+</span><span class="n">risk_free_rate</span><span class="p">)</span><span class="o">**</span><span class="p">((</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">-</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">days</span><span class="o">/</span><span class="mf">365.25</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">resolve_date</span><span class="p">])</span>
+<span class="n">discount</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">discount</span><span class="p">:</span>
+    <span class="n">payout</span> <span class="o">=</span> <span class="n">payout</span><span class="o">*</span><span class="n">discount_rate</span>
+
+  <span class="c1">#def exp_wealth(fair_odds_win, payout, bet_size): results = torch.mul(fair_odds_win, torch.mul(payout,bet_size)); return results.sum()</span>
+
+<span class="k">def</span> <span class="nf">exp_wealth_log</span><span class="p">(</span><span class="n">bet_size</span><span class="p">):</span>
+
+    <span class="n">win_prob</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cartesian_prod</span><span class="p">(</span><span class="o">*</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">odd</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">odd</span><span class="p">])</span> <span class="k">for</span> <span class="n">odd</span> <span class="ow">in</span> <span class="n">fair_odds_win</span><span class="p">]))</span>
+    <span class="n">win_status</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cartesian_prod</span><span class="p">(</span><span class="o">*</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">number_of_bets</span><span class="p">)]))</span>
+    <span class="n">event_prob</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">win_prob</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">log_payout_matrix</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">win_status</span><span class="o">*</span><span class="n">bet_size</span><span class="o">*</span><span class="n">payout</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="o">-</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">bet_size</span><span class="p">))</span>
+    <span class="n">log_wealth</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mul</span><span class="p">(</span><span class="n">event_prob</span><span class="p">,</span><span class="n">log_payout_matrix</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">log_wealth</span>
+
+<span class="n">bet_size</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">number_of_bets</span><span class="p">,</span> <span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.005</span>
+
+<span class="k">def</span> <span class="nf">apply_step</span><span class="p">(</span><span class="n">bet_size</span><span class="p">):</span>
+    <span class="c1">#print(bet_size.data)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">exp_wealth_log</span><span class="p">(</span><span class="n">bet_size</span><span class="p">)</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="n">bet_size</span><span class="o">.</span><span class="n">data</span> <span class="o">+=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">bet_size</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">bet_size</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="n">bet_size</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bet_size</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+	<span class="n">bet_size</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">bet_size</span><span class="o">.</span><span class="n">data</span><span class="o">/</span><span class="n">bet_size</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+	<span class="n">bet_size</span><span class="o">.</span><span class="n">grad</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span> <span class="n">apply_step</span><span class="p">(</span><span class="n">bet_size</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">bet_size</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div><p>Further Reading:</p>
+<ul>
+<li><a href="https://vegapit.com/article/numerically%5Fsolve%5Fkelly%5Fcriterion%5Fmultiple%5Fsimultaneous%5Fbets">Another implementation by Vegapit</a></li>
+</ul>
+</article>
+
+        </main><footer id="footer">
+    Copyright © 2021 Paul Wang
+</footer>
+</body>
+</html>
