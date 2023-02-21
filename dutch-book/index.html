@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Blog by Paul Wang">
+    
+    <link rel="shortcut icon" href="https://plwg.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Dutch Book</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://plwg.github.io">Logjam</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/tags/" title="tags">tags</a>
+            </li><li>
+                <a href="/about/" title="me">me</a>
+            </li><li>
+                <a href="https://plwg.github.io/index.xml" title="rss">rss</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Dutch Book</h1>
+            <div>
+                <time>February 9, 2023</time>
+                </div>
+    </header><p>In gambling, a Dutch book is a set of odds and bets, established by the
+bookmaker, that ensures a profit for the bookmaker at the expense of
+the gamblers, regardless of the outcome of the event being bet on.
+This concept is associated with probabilities implied by the odds not
+being coherent.</p>
+<p>However, in a prediction market, Dutch book opportunities arise due to
+inconsistencies in the probabilities assigned to various outcomes,
+which can occur when the market is still nascent or when a big trade
+moves the odds significantly. It is not monopolized by the bookmaker.
+It is up to arbitrage traders to pick up these opportunities, profit
+from them, and in the process, eliminate the mispricing.</p>
+<p>Let&rsquo;s explore two examples of Dutch books:</p>
+<h2 id="rain-or-no-rain">Rain or No Rain</h2>
+<p>Consider the question, &ldquo;Will it rain tomorrow?&rdquo; and assume that the
+following odds are being offered in two different markets:</p>
+<table>
+<thead>
+<tr>
+<th>Outcomes</th>
+<th>Decimal Odds</th>
+<th>Implied Probabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rain</td>
+<td>1.538</td>
+<td>0.65</td>
+</tr>
+<tr>
+<td>No Rain</td>
+<td>2.381</td>
+<td>0.42</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Outcomes</th>
+<th>Decimal Odds</th>
+<th>Implied Probabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rain</td>
+<td>3</td>
+<td>0.33</td>
+</tr>
+<tr>
+<td>No Rain</td>
+<td>1.333</td>
+<td>0.75</td>
+</tr>
+</tbody>
+</table>
+<p>Individually, the odds in both markets are too expensive and cannot be
+Dutch booked. However, there is a Dutch book here if we consider them
+together. The probabilities of no rain and rain add up to less than 1.
+This violates the axiom of probability.</p>
+<p>Let&rsquo;s trade them with the following step:</p>
+<ul>
+<li>Buy $33 worth of &ldquo;Rain&rdquo; in the second market</li>
+<li>Buy $42 worth of &ldquo;No Rain&rdquo; in the first market</li>
+</ul>
+<p>With a total cost of $75, this set of bets is guaranteed to yield $100
+regardless of the outcome, earning a 33% risk-free return.</p>
+<h2 id="incoherent-preference">Incoherent Preference</h2>
+<p>Consider the following market:</p>
+<table>
+<thead>
+<tr>
+<th>Outcomes</th>
+<th>Yes Probability</th>
+<th>No Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rain</td>
+<td>0.06</td>
+<td>0.94</td>
+</tr>
+<tr>
+<td>Rain and Snow</td>
+<td>0.10</td>
+<td>0.90</td>
+</tr>
+</tbody>
+</table>
+<p>These probabilities are incoherent because the probability of &ldquo;Rain&rdquo;
+should always be equal to or greater than the probability of &ldquo;Rain and
+Snow&rdquo;. Interestingly, identifying the incoherence does not require us
+to know the true probabilities of the weather events; we only need to
+notice that inequality is in the wrong direction. Question is, how can
+one profit from this without risk?</p>
+<p>We start by noticing that:</p>
+<ol>
+<li>Pr(Rain) is currently under-priced</li>
+<li>Pr(Rain and Snow) is currently over-priced</li>
+</ol>
+<p>Knowing that arbitraging would correct the mispricing, we can try to
+push things at that direction:</p>
+<ol>
+<li>Buy 100 &ldquo;Yes&rdquo; shares for &ldquo;Rain&rdquo;, for $6</li>
+<li>Buy 100 &ldquo;No&rdquo; shares for &ldquo;Rain and Snow&rdquo;, for $90</li>
+</ol>
+<p>The possible outcomes are:</p>
+<table>
+<thead>
+<tr>
+<th>Outcome</th>
+<th>Cost</th>
+<th>Payoff</th>
+<th>Profit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rain and No Snow</td>
+<td>96</td>
+<td>200</td>
+<td>104</td>
+</tr>
+<tr>
+<td>Rain and Snow</td>
+<td>96</td>
+<td>100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>No Rain and No Snow</td>
+<td>96</td>
+<td>100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>No Rain and Snow</td>
+<td>96</td>
+<td>100</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Not bad, with this Dutch Book, we will always be able to pocket $4
+when the bet settles, and even have a chance of netting $104!</p>
+<p>In conclusion, Dutch books in prediction markets are a result of
+inconsistent probabilities assigned to different outcomes, often
+across markets. This inconsistency presents a window of opportunity
+for arbitrage traders who can take advantage of the situation to make
+risk-free profits by buying and selling in multiple markets. Despite
+the complexities involved, such as the need to lock up funds in
+multiple markets and regulatory hurdles, Dutch book opportunities are
+straight-forward to spot using the axioms of probability. In
+prediction market, the liquidity should flow between markets until the
+implied probabilities are coherent.</p>
+</article>
+
+        </main><footer id="footer">
+    Copyright © 2021 Paul Wang
+</footer>
+</body>
+</html>
