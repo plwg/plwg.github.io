@@ -17,17 +17,22 @@
       <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://plwg.github.io/dutch-book/</guid>
-      <description>&lt;p&gt;In gambling, a Dutch book is a set of odds and bets, established by the
-bookmaker, that ensures a profit for the bookmaker at the expense of
-the gamblers, regardless of the outcome of the event being bet on.
-This concept is associated with probabilities implied by the odds not
-being coherent.&lt;/p&gt;
-&lt;p&gt;However, in a prediction market, Dutch book opportunities arise due to
-inconsistencies in the probabilities assigned to various outcomes,
-which can occur when the market is still nascent or when a big trade
-moves the odds significantly. It is not monopolized by the bookmaker.
-It is up to arbitrage traders to pick up these opportunities, profit
-from them, and in the process, eliminate the mispricing.&lt;/p&gt;
+      <description>&lt;p&gt;Gambling and prediction markets are known to produce a wide range of
+probabilities that may not always align with reality. In gambling,
+this can lead to the bookmaker benefiting at the expense of the
+gambler, regardless of the outcome. However, in prediction markets,
+these inconsistencies can offer an opportunity for arbitrage traders
+to generate risk-free profits. This is known as a Dutch book, and it
+arises when inconsistent probabilities assigned to different outcomes
+across markets are exploited.&lt;/p&gt;
+&lt;p&gt;A Dutch book can emerge in several ways. For instance, the market may
+still be in its early stages or a major trade may shift the odds
+significantly, leading to a mispricing. When this occurs, arbitrage
+traders can buy and sell in multiple markets to lock in a profit,
+thereby eliminating the mispricing. While this process may be complex
+due to regulatory barriers and the need to lock up funds in multiple
+markets, Dutch book opportunities are often short-lived, as the market
+tends to correct itself quickly once mispricing is detected.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s explore two examples of Dutch books:&lt;/p&gt;
 &lt;h2 id=&#34;rain-or-no-rain&#34;&gt;Rain or No Rain&lt;/h2&gt;
 &lt;p&gt;Consider the question, &amp;ldquo;Will it rain tomorrow?&amp;rdquo; and assume that the
@@ -110,17 +115,12 @@ regardless of the outcome, earning a 33% risk-free return.&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;These probabilities are incoherent because the probability of &amp;ldquo;Rain&amp;rdquo;
 should always be equal to or greater than the probability of &amp;ldquo;Rain and
-Snow&amp;rdquo;. Interestingly, identifying the incoherence does not require us
-to know the true probabilities of the weather events; we only need to
-notice that inequality is in the wrong direction. Question is, how can
-one profit from this without risk?&lt;/p&gt;
-&lt;p&gt;We start by noticing that:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Pr(Rain) is currently under-priced&lt;/li&gt;
-&lt;li&gt;Pr(Rain and Snow) is currently over-priced&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Knowing that arbitraging would correct the mispricing, we can try to
-push things at that direction:&lt;/p&gt;
+Snow&amp;rdquo;. While we don&amp;rsquo;t need to know the true probabilities of the
+weather events to identify this inconsistency, it is enough to
+recognize that the inequality is in the wrong direction.&lt;/p&gt;
+&lt;p&gt;Knowing that arbitraging would correct the mispricing, we can guess
+that the risk free trade is pushing things at that direction with
+proportion to the probabilities:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Buy 100 &amp;ldquo;Yes&amp;rdquo; shares for &amp;ldquo;Rain&amp;rdquo;, for $6&lt;/li&gt;
 &lt;li&gt;Buy 100 &amp;ldquo;No&amp;rdquo; shares for &amp;ldquo;Rain and Snow&amp;rdquo;, for $90&lt;/li&gt;
@@ -162,8 +162,8 @@ push things at that direction:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Not bad, with this Dutch Book, we will always be able to pocket $4
-when the bet settles, and even have a chance of netting $104!&lt;/p&gt;
+&lt;p&gt;With this Dutch Book, we will always be able to pocket $4 when the bet
+settles, and even have a chance of netting $104.&lt;/p&gt;
 &lt;p&gt;In conclusion, Dutch books in prediction markets are a result of
 inconsistent probabilities assigned to different outcomes, often
 across markets. This inconsistency presents a window of opportunity
@@ -171,9 +171,10 @@ for arbitrage traders who can take advantage of the situation to make
 risk-free profits by buying and selling in multiple markets. Despite
 the complexities involved, such as the need to lock up funds in
 multiple markets and regulatory hurdles, Dutch book opportunities are
-straight-forward to spot using the axioms of probability. In
-prediction market, the liquidity should flow between markets until the
-implied probabilities are coherent.&lt;/p&gt;
+straight-forward to spot using the axioms of probability. As
+prediction markets continue to grow and mature, these opportunities
+may become scarcer, but for now, the astute trader can profit from
+them and help steer market towards coherency.&lt;/p&gt;
 </description>
     </item>
     
