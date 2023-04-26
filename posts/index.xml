@@ -6,9 +6,271 @@
     <description>Recent content in Posts on Logjam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 09 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Apr 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://plwg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>A First Dive into Singapore Pools</title>
+      <link>https://plwg.github.io/a-first-dive-into-singapore-pools/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://plwg.github.io/a-first-dive-into-singapore-pools/</guid>
+      <description>&lt;p&gt;Lotteries have long been called a &amp;ldquo;tax on the stupid&amp;rdquo;. While I
+sympathize with this gross characterization, I do think it left some
+interesting questions unasked:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Which lottery game is better among others?&lt;/li&gt;
+&lt;li&gt;Is the lottery truly unbeatable?&lt;/li&gt;
+&lt;li&gt;Is there a way to improve expected value of winning?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To answer these questions, we must first quantify the &amp;ldquo;stupidity&amp;rdquo; of
+lotteries. In this post, we aim to do just that within the context of
+Singapore&amp;rsquo;s lottery games, utilizing principles of probability
+analysis. Rather than accepting the invincibility of the lottery
+system as a given, we roll up our sleeves and take a deeper look.
+Sometimes, as the saying goes, we may just find a real $100 note lying
+on the ground waiting to be picked up. Our motivation for this
+exercise is partly drawn from the story of a group of punters who
+managed to beat the Massachusetts state lottery in 2005, as recounted
+in Jordan Ellenberg&amp;rsquo;s book.&lt;/p&gt;
+&lt;p&gt;All information followed is up-to-date as of 2023-04-26. The
+information is not intended to be and do not constitute financial
+advice, investment advice, trading advice or any other advice.&lt;/p&gt;
+&lt;h2 id=&#34;lay-of-the-land&#34;&gt;Lay of the Land&lt;/h2&gt;
+&lt;p&gt;Singapore Pools, the sole operator legally allowed to run lotteries in
+the city state, offers three games currenly. Ranked by popularity,
+they are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;4D&lt;/li&gt;
+&lt;li&gt;TOTO&lt;/li&gt;
+&lt;li&gt;Singapore Sweep&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We will tackle 4D and Singapore Sweep first. The reason is that they
+both have fixed prizes, which makes the analysis straightforward.
+TOTO, with its variable jackpot and more complex mechanism, warrants
+closer scrutiny.&lt;/p&gt;
+&lt;h2 id=&#34;singapore-sweep&#34;&gt;Singapore Sweep&lt;/h2&gt;
+&lt;p&gt;The rules can be found &lt;a href=&#34;https://online.singaporepools.com/en/lottery/how-play-singapore-sweep&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Overall the goal is to pick a number from 1000000 to 4499999 (both
+inclusive) that matches drawn numbers in the same range. Each pick
+costs S$3. There are 133 draws with various prizes, ranging from
+S$2.3M to S$1,000. If a number wins multiple prizes, it is entitled to
+all of them, and multiple winners do not split prizes. Additionally, a
+separate mini prize is awarded if the last two digits match with one
+of the nine sets of draw two digit number.&lt;/p&gt;
+&lt;p&gt;Since all the draws are independent, we can calculate their expected
+value (EV) and add them up. Here is a table summarizing the results:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Prize&lt;/th&gt;
+&lt;th&gt;Prob&lt;/th&gt;
+&lt;th&gt;Number of Price&lt;/th&gt;
+&lt;th&gt;EV&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;$2,300,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.66&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$500,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$250,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.07&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$10,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;$0.03&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$5,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;$0.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$3,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;$0.03&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$2,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;$0.02&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$1,000&lt;/td&gt;
+&lt;td&gt;0.00003%&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;$0.01&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$6&lt;/td&gt;
+&lt;td&gt;9%&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;$0.54&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;$1.51&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From this table, it&amp;rsquo;s clear that playing the Singapore Sweep is not a
+wise financial decision. With an expected loss of 49.6% for every S$3
+spent, players are not likely to come out ahead.&lt;/p&gt;
+&lt;h2 id=&#34;4d&#34;&gt;4D&lt;/h2&gt;
+&lt;p&gt;The rules can be found &lt;a href=&#34;https://www.singaporepools.com.sg/en/rules/Pages/4d-game-rules-general.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Overall the goal is to pick a number from 0000 to 9999 (both
+inclusive) that matches drawn numbers in the same range. Each pick
+costs S$1. There are 23 draws with various prizes, ranging from
+S$3,000 to S$60. If a number wins multiple prizes, it is entitled to
+all of them, and multiple winners do not split prizes.&lt;/p&gt;
+&lt;p&gt;An interesting mechanism for 4D is that better can choose from two
+types of play: big bet or small bet. Big bet has more winning
+combinations but less prize money, ranging from S$2,000 to S$60; the
+opposite is true for small bet, with prize money ranging from S$3,000
+to S$800. This means that when calculating EVs, two tables need to be
+drawn, as followed:&lt;/p&gt;
+&lt;p&gt;Big bet&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Prize&lt;/th&gt;
+&lt;th&gt;Prob&lt;/th&gt;
+&lt;th&gt;Number of Winning Combination&lt;/th&gt;
+&lt;th&gt;EV&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;$2,000&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$1,000&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$490&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$250&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;$0.25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$60&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;$0.06&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;$0.66&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Small bet&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Prize&lt;/th&gt;
+&lt;th&gt;Prob&lt;/th&gt;
+&lt;th&gt;Number of Winning Combination&lt;/th&gt;
+&lt;th&gt;EV&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;$3,000&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$2,000&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$800&lt;/td&gt;
+&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;$0.08&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;$0.58&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Again, from these tables, it is clear that playing 4D, big or small, is
+not a wise financial decision. The less bad of the two is big bet,
+with a expected loss of 34%. Assuming utility-agnostic, the small bet
+is strictly worse than the big bet.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this article, we delved into two of the three lottery games legally
+offered in Singapore and found that they are both losing propositions
+mathematically. To answer the questions we set out to investigate:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Which lottery game is better among others?
+&lt;ul&gt;
+&lt;li&gt;4D big bet is the least bad among the three (Sweep, 4D big, 4D
+small). One is &lt;strong&gt;only&lt;/strong&gt; expected to lose 34c per dollar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Is the lottery truly unbeatable?
+&lt;ul&gt;
+&lt;li&gt;Yes. These two fixed-prize games both have negative EV, meaning
+that one is guaranteed to lose money in the long term.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Is there a way to improve expected value of winning?
+&lt;ul&gt;
+&lt;li&gt;No. There is no way to game them by structuring bet. There is no
+strategy element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In short, in this case, there is no free money lying on the ground. In
+the next post we will continue our journey and investigate the last
+game in town - TOTO. Stay tuned for a dive into the deep end of
+Singapore Pools.&lt;/p&gt;
+</description>
+    </item>
     
     
     
