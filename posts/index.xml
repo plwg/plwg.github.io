@@ -29,8 +29,8 @@ interesting questions unasked:&lt;/p&gt;
 &lt;p&gt;To answer these questions, we must first quantify the &amp;ldquo;stupidity&amp;rdquo; of
 lotteries. In this post, we aim to do just that within the context of
 Singapore&amp;rsquo;s lottery games, utilizing principles of probability
-analysis. Rather than accepting the invincibility of the lottery
-system as a given, we roll up our sleeves and take a deeper look.
+analysis. &lt;strong&gt;Rather than accepting the invincibility of the lottery
+system as a given, we roll up our sleeves and take a deeper look.&lt;/strong&gt;
 Sometimes, as the saying goes, we may just find a real $100 note lying
 on the ground waiting to be picked up. Our motivation for this
 exercise is partly drawn from the story of a group of punters who
@@ -164,31 +164,31 @@ drawn, as followed:&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;$2,000&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;$0.20&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$1,000&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;$0.10&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$490&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;$0.05&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$250&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;10&lt;/td&gt;
 &lt;td&gt;$0.25&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$60&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;10&lt;/td&gt;
 &lt;td&gt;$0.06&lt;/td&gt;
 &lt;/tr&gt;
@@ -213,19 +213,19 @@ drawn, as followed:&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;$3,000&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;$0.30&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$2,000&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;$0.20&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$800&lt;/td&gt;
-&lt;td&gt;0.0001&lt;/td&gt;
+&lt;td&gt;0.01%&lt;/td&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;$0.08&lt;/td&gt;
 &lt;/tr&gt;
