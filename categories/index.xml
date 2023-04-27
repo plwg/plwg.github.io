@@ -34,23 +34,23 @@ Sometimes, as the saying goes, we may just find a real $100 note lying
 on the ground waiting to be picked up. Our motivation for this
 exercise is partly drawn from the story of a group of punters who
 managed to beat the Massachusetts state lottery in 2005, as recounted
-in Jordan Ellenberg&amp;rsquo;s book.&lt;/p&gt;
+in Jordan Ellenberg&amp;rsquo;s &lt;a href=&#34;https://en.wikipedia.org/wiki/How%5FNot%5Fto%5FBe%5FWrong&#34;&gt;book&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;All information followed is up-to-date as of 2023-04-26. The
 information is not intended to be and do not constitute financial
 advice, investment advice, trading advice or any other advice.&lt;/p&gt;
 &lt;h2 id=&#34;lay-of-the-land&#34;&gt;Lay of the Land&lt;/h2&gt;
-&lt;p&gt;Singapore Pools, the sole operator legally allowed to run lotteries in
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Singapore%5FPools&#34;&gt;Singapore Pools&lt;/a&gt;, the sole perator legally allowed to run lotteries in
 the city state, offers three games currenly. Ranked by popularity,
 they are:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;4D&lt;/li&gt;
-&lt;li&gt;TOTO&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/4-Digits&#34;&gt;4D&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Toto%5F(lottery)&#34;&gt;TOTO&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Singapore Sweep&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We will tackle 4D and Singapore Sweep first. The reason is that they
 both have fixed prizes, which makes the analysis straightforward.
 TOTO, with its variable jackpot and more complex mechanism, warrants
-closer scrutiny.&lt;/p&gt;
+closer scrutiny separately.&lt;/p&gt;
 &lt;h2 id=&#34;singapore-sweep&#34;&gt;Singapore Sweep&lt;/h2&gt;
 &lt;p&gt;The rules can be found &lt;a href=&#34;https://online.singaporepools.com/en/lottery/how-play-singapore-sweep&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Overall the goal is to pick a number from 1000000 to 4499999 (both
@@ -236,10 +236,10 @@ drawn, as followed:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Again, from these tables, it is clear that playing 4D, big or small, is
-not a wise financial decision. The less bad of the two is big bet,
-with a expected loss of 34%. Assuming utility-agnostic, the small bet
-is strictly worse than the big bet.&lt;/p&gt;
+&lt;p&gt;Again, from these tables, it is clear that playing 4D, big or small,
+is not a wise financial decision. The less bad of the two is big bet,
+with a expected loss of 34%. Assuming the player is indifferent to
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Utility&#34;&gt;utility&lt;/a&gt;, the small bet is strictly worse than the big bet.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this article, we delved into two of the three lottery games legally
 offered in Singapore and found that they are both losing propositions
@@ -264,7 +264,7 @@ strategy element.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;In short, in this case, there is no free money lying on the ground. In
+&lt;p&gt;In short, in this case, &lt;a href=&#34;https://en.wikipedia.org/wiki/Efficient-market%5Fhypothesis&#34;&gt;there is no free money lying on the ground&lt;/a&gt;. In
 the next post we will continue our journey and investigate the last
 game in town - TOTO. Stay tuned for a dive into the deep end of
 Singapore Pools.&lt;/p&gt;
