@@ -57,9 +57,10 @@ closer scrutiny separately.&lt;/p&gt;
 inclusive) that matches drawn numbers in the same range. Each pick
 costs S$3. There are 133 draws with various prizes, ranging from
 S$2.3M to S$1,000. If a number wins multiple prizes, it is entitled to
-all of them, and multiple winners do not split prizes. Additionally, a
-separate mini prize is awarded if the last two digits match with one
-of the nine sets of draw two digit number.&lt;/p&gt;
+all of them. The same combination probably isn&amp;rsquo;t sold twice (see
+&amp;ldquo;Counter-party Risk&amp;rdquo; section below). Additionally, a separate mini
+prize is awarded if the last two digits match with one of the nine
+sets of drawn two digit number.&lt;/p&gt;
 &lt;p&gt;Since all the draws are independent, we can calculate their expected
 value (EV) and add them up. Here is a table summarizing the results:&lt;/p&gt;
 &lt;table&gt;
@@ -240,16 +241,16 @@ drawn, as followed:&lt;/p&gt;
 is not a wise financial decision. The less bad of the two is big bet,
 with an expected loss of 34%. Assuming the player is indifferent to
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Utility&#34;&gt;utility&lt;/a&gt;, the small bet is strictly worse than the big bet.&lt;/p&gt;
-&lt;h2 id=&#34;counterparty-risk&#34;&gt;Counterparty Risk&lt;/h2&gt;
+&lt;h2 id=&#34;counter-party-risk&#34;&gt;Counter-party Risk&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Counterparty risk is the likelihood or probability that one of those
+&lt;p&gt;Counter-party risk is the likelihood or probability that one of those
 involved in a transaction might default on its contractual obligation.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For Singapore Sweep and 4D, the prizes are not split in case of
 multiple winners. Left unmitigated, this means that the lottery operator
 can face uncapped loss if there are multiple winning tickets. Is there
 a tail risk that the operator cannot pay out the price?&lt;/p&gt;
-&lt;p&gt;No for 4D. In the case of the two games, the operator mitigated the
+&lt;p&gt;Not for 4D. In the case of the two games, the operator mitigated the
 risk by reserving the right to &lt;a href=&#34;https://www.singaporepools.com.sg/en/services/Pages/%5Farchives/placing-4D-bets-at-outlets.html&#34;&gt;declare a combination &amp;ldquo;sold out&amp;rdquo;&lt;/a&gt; for
 4D:&lt;/p&gt;
 &lt;blockquote&gt;
