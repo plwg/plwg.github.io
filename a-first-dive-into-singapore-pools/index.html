@@ -34,12 +34,12 @@
                 <time>April 26, 2023</time>
                 </div>
     </header><p>Lotteries have long been called a &ldquo;tax on the stupid&rdquo;. While I
-sympathize with this gross characterization, I do think it left some
+sympathize with this simplistic characterization, I do think it left some
 interesting questions unasked:</p>
 <ol>
 <li>Which lottery game is better among others?</li>
 <li>Is the lottery truly unbeatable?</li>
-<li>Is there a way to improve expected value of winning?</li>
+<li>Is there a way to improve expected values of winning?</li>
 </ol>
 <p>To answer these questions, we must first quantify the &ldquo;stupidity&rdquo; of
 lotteries. In this post, we aim to do just that within the context of
@@ -77,8 +77,10 @@ all of them. The same combination probably isn&rsquo;t sold twice (see
 &ldquo;Counter-party Risk&rdquo; section below). Additionally, a separate mini
 prize is awarded if the last two digits match with one of the nine
 sets of drawn two digit number.</p>
-<p>Since all the draws are independent, we can calculate their expected
-value (EV) and add them up. Here is a table summarizing the results:</p>
+<p>Given the expected value of the sum of several random variables is
+equal to the sum of their expectations, we can calculate each prize&rsquo;s
+individual expected value (EV) and add them up for the total expected
+value. Here is a table summarizing the results:</p>
 <table>
 <thead>
 <tr>
@@ -255,20 +257,20 @@ drawn, as followed:</p>
 </table>
 <p>Again, from these tables, it is clear that playing 4D, big or small,
 is not a wise financial decision. The less bad of the two is big bet,
-with an expected loss of 34%. Assuming the player is indifferent to
-<a href="https://en.wikipedia.org/wiki/Utility">utility</a>, the small bet is strictly worse than the big bet.</p>
+with an expected loss of 34%. Assuming the player&rsquo;s utility function
+does not prefer big payouts, the small bet is strictly worse than the
+big bet.</p>
 <h2 id="counter-party-risk">Counter-party Risk</h2>
 <blockquote>
 <p>Counter-party risk is the likelihood or probability that one of those
 involved in a transaction might default on its contractual obligation.</p>
 </blockquote>
 <p>For Singapore Sweep and 4D, the prizes are not split in case of
-multiple winners. Left unmitigated, this means that the lottery operator
+multiple winners. Without mitigation, this means that the lottery operator
 can face uncapped loss if there are multiple winning tickets. Is there
-a tail risk that the operator cannot pay out the price?</p>
-<p>Not for 4D. In the case of the two games, the operator mitigated the
-risk by reserving the right to <a href="https://www.singaporepools.com.sg/en/services/Pages/%5Farchives/placing-4D-bets-at-outlets.html">declare a combination &ldquo;sold out&rdquo;</a> for
-4D:</p>
+a tail risk that the operator cannot pay out the prize?</p>
+<p>Not for 4D, as the operator mitigated the risk by reserving the right
+to <a href="https://www.singaporepools.com.sg/en/services/Pages/%5Farchives/placing-4D-bets-at-outlets.html">declare a combination &ldquo;sold out&rdquo;</a> for 4D:</p>
 <blockquote>
 <p>We may be unable to accept your bet if the number has reached its
 sales limit for that draw.</p>
@@ -287,7 +289,7 @@ to 99. This will be printed on just one ticket slip.</p>
 </blockquote>
 <p>The second option, 100 Sweep, <a href="https://online.singaporepools.com/en/lottery/how-play-singapore-sweep">is no longer offered</a> as of April
 23, 2023.</p>
-<p>By giving limited flexibility when choosing the combination, the
+<p>By giving only limited flexibility when choosing the combination, the
 operator prevents the same combination from being <a href="https://en.wikipedia.org/wiki/Overselling">oversold</a>,
 effectively curtailing its <a href="https://en.wikipedia.org/wiki/Black%5Fswan%5Ftheory">tail risk</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
