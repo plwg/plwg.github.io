@@ -69,13 +69,13 @@ create a stochastic system with reflexivity. This means that we cannot
 simply draw a table to calculate the EV of TOTO. Each draw will have
 to have its own table.</p>
 <p>A further complication arises when some information is not publicly
-available. For example, it is not possible to know how many players
+available. For example, it is not possible to know how many punters
 will bet before a draw is closed. Hence it is not possible to know the
 exact jackpot for a draw before it is closed.</p>
 <p>At this point, you may ask, &ldquo;why should I care? Isn&rsquo;t it as simple as
 buying when the prize is big?&rdquo;</p>
-<p>The issue is that when the prize is large, there are more players.
-This is not desirable because more players mean that the prizes will
+<p>The issue is that when the prize is large, there are more punters.
+This is not desirable because more punters mean that the prizes will
 be split, with each of them getting less. All else equal, a less
 crowded bet is a more desirable bet.</p>
 <p>In fact, based on the past three hundred draws, it can be observed
@@ -95,7 +95,7 @@ the US also show similar quadratic relationship (see Figure
         </figcaption>
 </figure>
 
-<p>While such a convex relationship is bad news for players, it does show
+<p>While such a convex relationship is bad news for punters, it does show
 that number of ticket sold, and consequently, the final jackpot, is
 largely predictable from publicly available information. This is
 encouraging because it means that one can largely examine the states
@@ -104,7 +104,7 @@ of the system before placing a bet.</p>
 <p>In its essence, snowball is the part of game rule that enable the
 jackpot to accumulate beyond the current draw. Any unwon prizes in
 first four prize groups accumulate to next draw. This is what create
-a headline-worthy jackpot and snaking queues of players.</p>
+a headline-worthy jackpot and snaking queues of punters.</p>
 <p>Cascade happens when snowball ends. If the jackpot has been snowballed
 three times, and still not won in the fourth time, it cascades down to
 the prize group below, until won. Here the slate is wiped, jackpot is
@@ -112,14 +112,14 @@ cleared and the game becomes boring again.</p>
 <p>Astute readers can see that snowball and cascade stages are probably where
 money are made, if such an opportunity exists at all. The reasoning
 for this is straightforward. In a draw where the jackpot is purely consisting of current sales
-proceeding, all the players in aggregate are only expected to get what
+proceeding, all the punters in aggregate are only expected to get what
 is left of their initial stake plus some<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, after the state
 has taken its 8% tax<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> and Singapore Pools its 46% cut. However,
 in the case of a snowball, or better, a thrice-snowballed draw on the
-verge of cascading, current players, in aggregate, have a chance or is
+verge of cascading, current punters, in aggregate, have a chance or is
 certain to get the above, plus money left in the pool by earlier
-players. In fact, this is the insight that enabled the <a href="https://en.wikipedia.org/wiki/Advantage%5Fgambling">advantage
-players</a> to beat the Massachusetts Cash Winfall lottery. They only bet
+punters. In fact, this is the insight that enabled the <a href="https://en.wikipedia.org/wiki/Advantage%5Fgambling">advantage
+punters</a> to beat the Massachusetts Cash Winfall lottery. They only bet
 when the prize pool is on the verge of cascading. Just like one of
 those coin pushers in an arcade, it make no sense to throw in a coin when
 the machine is empty, whereas the same action becomes appealing when
@@ -127,14 +127,14 @@ it is filled to the brim.</p>
 <h2 id="balance-on-the-edge">Balance on the Edge</h2>
 <p>So it all comes down to two opposing forces:</p>
 <ol>
-<li>The tendency of large number of players when the jackpot is big</li>
+<li>The tendency of large number of punters when the jackpot is big</li>
 <li>The tendency of large payout when the jackpot is big</li>
 </ol>
 <p>The answer to the question whether the game is beatable, or whether it
 has positive EV given certain strategy, is hinged on whether the
 system is well-designed to balance these two forces. It does not have
 to be. Cash Winfall wasn&rsquo;t and the latter constantly outweighs the
-former <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>, giving players an edge.</p>
+former <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>, giving punters an edge.</p>
 <p>How can we model this advantage? One option is <a href="https://en.wikipedia.org/wiki/Monte%5FCarlo%5Fmethod">simulation</a>. We can simulate
 the lottery draw many times and observe its behaviors. Another, more
 elegant, idea presented in Jordan Ellenberg&rsquo;s book is to consider the
@@ -264,7 +264,7 @@ popularity, punters are actually worse off compared to playing a draw
 where the jackpot has been snowballed 2 or 3 times.</p>
 <h2 id="the-winners">The Winners</h2>
 <p>The true winner of TOTO is Singapore Pools and the Singapore
-government, based on the simple fact that roughly half of the player&rsquo;s
+government, based on the simple fact that roughly half of the punter&rsquo;s
 stake is taken away as income (before expenses) and tax even before
 the outcome is decided.</p>
 <blockquote>
@@ -319,7 +319,7 @@ the damage incurred by participating such hazardous pursuit.</p>
 <p>The &ldquo;some&rdquo; here is referring prize group 5-7, which are fixed prize and not paid from the prize pool form using sales proceeding. Its EV is around 24 cents.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p>I guess that&rsquo;s why lottery winning is not taxed in Singapore. Technically all players, win or lose, have already been taxed once.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>I guess that&rsquo;s why lottery winning is not taxed in Singapore. Technically all punters, win or lose, have already been taxed once.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7" role="doc-endnote">
 <p>Its imbalance is the result of a combination of the game&rsquo;s unpopularity and generous cascading mechanism.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
