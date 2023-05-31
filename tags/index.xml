@@ -87,7 +87,7 @@ encouraging because it means that one can largely examine the states
 of the system before placing a bet.&lt;/p&gt;
 &lt;h2 id=&#34;the-snowball-and-the-cascade&#34;&gt;The Snowball and the Cascade&lt;/h2&gt;
 &lt;p&gt;In its essence, snowball is the part of game rule that enable the
-jackpot to accumulate beyond the current draw. Any unwoned prizes in
+jackpot to accumulate beyond the current draw. Any unwon prizes in
 first four prize groups accumulate to next draw. This is what create
 a headline-worthy jackpot and snaking queues of players.&lt;/p&gt;
 &lt;p&gt;Cascade happens when snowball ends. If the jackpot has been snowballed
@@ -118,7 +118,7 @@ it is filled to the brim.&lt;/p&gt;
 &lt;p&gt;The answer to the question whether the game is beatable, or whether it
 has positive EV given certain strategy, is hinged on whether the
 system is well-designed to balance these two forces. It does not have
-to be. Cash Winfall wasn&amp;rsquo;t and the latter constantly outweights the
+to be. Cash Winfall wasn&amp;rsquo;t and the latter constantly outweighs the
 former &lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;, giving players an edge.&lt;/p&gt;
 &lt;p&gt;How can we model this advantage? One option is &lt;a href=&#34;https://en.wikipedia.org/wiki/Monte%5FCarlo%5Fmethod&#34;&gt;simulation&lt;/a&gt;. We can simulate
 the lottery draw many times and observe its behaviors. Another, more
@@ -127,7 +127,7 @@ all punters in a draw as one entity. Namely, without caring who
 exactly won how much, we can consider how much money the punters as a
 whole put in, and how much they managed to win in total. If the former
 is larger than the latter, the punters lose money. And since all
-tickets should have propotionally contributed to the stake, and has a
+tickets should have proportionally contributed to the stake, and has a
 corresponding share of the expected prize, by principle of additivity,
 we know that buying a ticket would be a losing bet. This second
 approach reduces the variables we need to study to two - the total
@@ -142,13 +142,13 @@ ratio between total winning and total stake.&lt;/p&gt;
 &lt;p&gt;The above chart shows TOTO&amp;rsquo;s return during the last 303 draws, since
 2020 July. Several observations can be made from the chart:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;The return obscilliates around 50%. This is inline with expectation
+&lt;li&gt;The return oscillates around 50%. This is inline with expectation
 as the state and Singapore Pools takes 50% from each stake&lt;/li&gt;
 &lt;li&gt;The return has never exceeded 100%, with the highest being 79%.&lt;/li&gt;
 &lt;li&gt;The worst return is 22%. It happened on Draw No.3783, where nobody
 won the first and second prize group.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;We can tabluate the return by the number of snowball acccumulated&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;p&gt;We can tabulate the return by the number of snowball accumulated&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -188,7 +188,7 @@ won the first and second prize group.&lt;/li&gt;
 &lt;p&gt;We can conclude that while there is no positive-ev way to play TOTO,
 the least bad way is only play when the jackpot has snowballed three
 times. At that point the EV is almost 70%. These opportunities are
-rare, occuring roughly 1 in 20 draws.&lt;/p&gt;
+rare, occurring roughly 1 in 20 draws.&lt;/p&gt;
 &lt;p&gt;Returning to our original question of whether TOTO can be beaten, the
 answer is no, not under the current rules and given the game&amp;rsquo;s
 popularity. This conclusion is worth reexamining if any of the two
@@ -199,7 +199,7 @@ that the jackpot has accumulated 3 times. This, sadly, does not push the
 bet into profitable territory.&lt;/p&gt;
 &lt;h2 id=&#34;festive-draws&#34;&gt;Festive Draws&lt;/h2&gt;
 &lt;p&gt;An interesting exercise is to use the same framework to analyze
-festive draws. In these events, Singapore Pools will anounced a large
+festive draws. In these events, Singapore Pools will announce a large
 jackpot amount, which in turns will attract a huge crowd to play TOTO.
 Are these good opportunities to play the lottery? Below are six such
 draws:&lt;/p&gt;
@@ -249,7 +249,7 @@ popularity, punters are actually worse off compared to playing a draw
 where the jackpot has been snowballed 2 or 3 times.&lt;/p&gt;
 &lt;h2 id=&#34;the-winners&#34;&gt;The Winners&lt;/h2&gt;
 &lt;p&gt;The true winner of TOTO is Singapore Pools and the Singapore
-government, based on the simple fact that rougly half of the player&amp;rsquo;s
+government, based on the simple fact that roughly half of the player&amp;rsquo;s
 stake is taken away as income (before expenses) and tax even before
 the outcome is decided.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -264,7 +264,7 @@ Club) has contributed more than $6 billion towards nation-building.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;A deep dive into the world of Singapore lotteries has revealed that
 none of the games, in their current form, are good bets. While 4D and
-Singapore Sweep are impenetrale statistically, TOTO&amp;rsquo;s moat is less
+Singapore Sweep are impenetrable statistically, TOTO&amp;rsquo;s moat is less
 deterministic, but still wide. It is made up of its popularity
 and balanced cascade mechanism. As long as there are so many people
 playing the game as it is, punters as a whole bleed money profusely. A
@@ -277,9 +277,10 @@ the damage incurred by participating such hazardous pursuit.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Birthday%5Fattack&#34;&gt;Birthday Attack&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Jordan Ellenberg&amp;rsquo;s book &lt;a href=&#34;https://www.amazon.com/How-Not-Be-Wrong-Mathematical/dp/0143127535&#34;&gt;How Not be Wrong&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=QtlmXoHpNyI&#34;&gt;How to Use Math to Get Rich in the Lottery*&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mass.gov/doc/letter-to-state-treasurer-steven-grossman-regarding-the-lottery-july-2012/download&#34;&gt;Letter to Treasurer Steven Grossman regarding the Lotter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mass.gov/doc/letter-to-state-treasurer-steven-grossman-regarding-the-lottery-july-2012/download&#34;&gt;Letter to Treasurer Steven Grossman regarding the Lottery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.singaporepools.com.sg/en/spn/Pages/sgpools-annual-report.aspx&#34;&gt;Singapore Pools Annual Reports&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://thefinance.sg/2021/07/05/how-much-money-does-singapore-pools-make/comment-page-1/&#34;&gt;How Much Money does Singapore Pools Make?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.elstonsam.com/post/test-123&#34;&gt;How to earn money from the lottery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://algobeans.com/2022/02/10/win-toto-lottery/&#34;&gt;Gaining an Edge in Lottery with Math&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://rstudio-pubs-static.s3.amazonaws.com/390541%5F497b8308691b45e7bfbb7f2f0ebd35e4.html&#34;&gt;TOTO: An Irrational, Rational Approach to Singapore’s Second Biggest Lottery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://prakashash.io/can-we-use-frequency-analysis-to-increase-our-odds-of-winning-something-in-the-game-of-toto-p-s-chatgpt-helped-me/&#34;&gt;Frequency Analysis of TOTO&lt;/a&gt;&lt;/li&gt;
@@ -300,19 +301,19 @@ the damage incurred by participating such hazardous pursuit.&lt;/p&gt;
 &lt;p&gt;My hypothesis is that this is related to FOMO, where non-regular is lured/pressured into buying a ticket or two by media exposure or social circles. Or it reveals utility preference when it comes to large sum of money?&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;The &amp;ldquo;some&amp;rdquo; here is refering prize group 5-7, which are fixed prize and not paid from the prize pool form using sales proceeding. Its EV is around 24 cents.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;some&amp;rdquo; here is referring prize group 5-7, which are fixed prize and not paid from the prize pool form using sales proceeding. Its EV is around 24 cents.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
 &lt;p&gt;I guess that&amp;rsquo;s why lottery winning is not taxed in Singapore. Technically all players, win or lose, have already been taxed once.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:7&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Its imbalance is the result of a combination of the game&amp;rsquo;s inpopularity and generous cascading mechanism.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Its imbalance is the result of a combination of the game&amp;rsquo;s unpopularity and generous cascading mechanism.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:8&#34; role=&#34;doc-endnote&#34;&gt;
 &lt;p&gt;Only includes draw after 2021 September due to rule change&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:9&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Final jackpot is usually larger than announced jackpot because it is the maxmium of the announced jackpot and 38% of the upcoming prize pool. If the latter is larger than the former, it means that effectively the large jackpot is paid by the punters enticed by the said large jackpot.&amp;#160;&lt;a href=&#34;#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Final jackpot is usually larger than announced jackpot because it is the maximum of the announced jackpot and 38% of the upcoming prize pool. If the latter is larger than the former, it means that effectively the large jackpot is paid by the punters enticed by the said large jackpot.&amp;#160;&lt;a href=&#34;#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id=&#34;fn:10&#34; role=&#34;doc-endnote&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.singaporepools.com.sg/en/rules/Pages/toto-game-rules-general.html&#34;&gt;Larger Toto jackpots to make a comeback as prize amount now allowed to snowball over 4 draws&lt;/a&gt;. Archived &lt;a href=&#34;https://web.archive.org/web/20230525015002/https://www.straitstimes.com/singapore/consumer/toto-jackpot-can-again-snowball-over-four-draws-strict-measures-to-keep-eager&#34;&gt;link&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:10&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
