@@ -13,69 +13,6 @@
     
     
     <item>
-      <title>My Indispensable Tools</title>
-      <link>https://plwg.github.io/my-indispensable-tools/</link>
-      <pubDate>Thu, 28 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://plwg.github.io/my-indispensable-tools/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Software
-&lt;ul&gt;
-&lt;li&gt;Calibre
-&lt;ul&gt;
-&lt;li&gt;Full Text Search&lt;/li&gt;
-&lt;li&gt;Metadata&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Anki
-&lt;ul&gt;
-&lt;li&gt;FSRS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;hledger&lt;/li&gt;
-&lt;li&gt;Portfolio Performance&lt;/li&gt;
-&lt;li&gt;Firefox
-&lt;ul&gt;
-&lt;li&gt;ublock origin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Orgmode&lt;/li&gt;
-&lt;li&gt;WSL&lt;/li&gt;
-&lt;li&gt;kepubify&lt;/li&gt;
-&lt;li&gt;pdftk&lt;/li&gt;
-&lt;li&gt;tar&lt;/li&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;li&gt;Vim&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Web
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://marketcaps.site&#34;&gt;Market Cap Site&lt;/a&gt;: for re-balancing globally diversified ETF portfolio&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ilovessb.com&#34;&gt;I Love SSB&lt;/a&gt;: useful for analyzing bond issuance in Singapore context&lt;/li&gt;
-&lt;li&gt;Google Sheets&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://goodreads.com&#34;&gt;Goodreads&lt;/a&gt;: there is really no alternative to this. GR is still the
-best site to keep a reading list and discover new books&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://speed.cloudflare.com/&#34;&gt;Cloudflare Speed Test&lt;/a&gt;: for diagnosing internet connection issue&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.metaculus.com&#34;&gt;Metaculus&lt;/a&gt;: Prediction aggregation site. Useful for keep tracking
-of world events&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.channelnewsasia.com/&#34;&gt;CNA&lt;/a&gt;: Blazingly fast news site. Mainly reporting on Singapore and
-SEA news. Sometimes I use it in lieu of Google to check my
-internet connection.&lt;/li&gt;
-&lt;li&gt;gwern.net&lt;/li&gt;
-&lt;li&gt;wikipedia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://the-pequod.com/&#34;&gt;https://the-pequod.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;pinboard&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://annas-archive.org/&#34;&gt;https://annas-archive.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://standardebooks.org/ebooks&#34;&gt;https://standardebooks.org/ebooks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
       <title>Kelly Calculator for Multiple Outcomes</title>
       <link>https://plwg.github.io/kelly-calculator-for-multiple-outcomes/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
